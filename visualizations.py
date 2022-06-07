@@ -56,8 +56,8 @@ def make_visualizations(news_df):
 
     common_words = get_top_n_words(all_unprocessed_articles, 20)
 
-    df1 = pd.DataFrame(common_words, columns = ['Review Text' , 'count'])
-    raw_top20words = df1.groupby('Review Text').sum()['count'].sort_values(ascending=False)
+    df1 = pd.DataFrame(common_words, columns = ['Article News Text' , 'count'])
+    raw_top20words = df1.groupby('Article News Text').sum()['count'].sort_values(ascending=False)
 
     fig = px.bar(raw_top20words, x=raw_top20words.index, y="count", title='Top 20 words in the News Articles before removing stop words')
     fig.update_traces(marker_color='gold', marker_line_color='rgb(8,48,107)',
@@ -73,8 +73,8 @@ def make_visualizations(news_df):
 
     common_words = get_top_n_words(all_processed_articles, 20)
 
-    df1 = pd.DataFrame(common_words, columns = ['Review Text' , 'count'])
-    top20words = df1.groupby('Review Text').sum()['count'].sort_values(ascending=False)
+    df1 = pd.DataFrame(common_words, columns = ['Article News Text' , 'count'])
+    top20words = df1.groupby('Article News Text').sum()['count'].sort_values(ascending=False)
 
     fig = px.bar(top20words, x=top20words.index, y="count", title='Top 20 words in the News Articles after removing stop words')
     fig.update_traces(marker_color='gold', marker_line_color='rgb(8,48,107)',
@@ -95,8 +95,8 @@ def make_visualizations(news_df):
 
     common_words = get_top_n_bigram(all_unprocessed_articles, 20)
 
-    df3 = pd.DataFrame(common_words, columns = ['Review Text' , 'count'])
-    common_bigram_words = df3.groupby('Review Text').sum()['count'].sort_values(ascending=False)
+    df3 = pd.DataFrame(common_words, columns = ['Article News Text' , 'count'])
+    common_bigram_words = df3.groupby('Article News Text').sum()['count'].sort_values(ascending=False)
 
     fig = px.bar(common_bigram_words, x=common_bigram_words.index, y="count", title='Top 20 Bigram words in the News Articles before removing stop words')
     fig.update_traces(marker_color='darksalmon', marker_line_color='rgb(8,48,107)',
@@ -109,8 +109,8 @@ def make_visualizations(news_df):
     # Top 20 Bigram words in the News Articles after removing stop words
     common_words = get_top_n_bigram(all_processed_articles, 20)
 
-    df3 = pd.DataFrame(common_words, columns = ['Review Text' , 'count'])
-    common_bigram_words = df3.groupby('Review Text').sum()['count'].sort_values(ascending=False)
+    df3 = pd.DataFrame(common_words, columns = ['Article News Text' , 'count'])
+    common_bigram_words = df3.groupby('Article News Text').sum()['count'].sort_values(ascending=False)
 
     fig = px.bar(common_bigram_words, x=common_bigram_words.index, y="count", title='Top 20 Bigram words in the News Articles after removing stop words')
     fig.update_traces(marker_color='darksalmon', marker_line_color='rgb(8,48,107)',
@@ -131,8 +131,8 @@ def make_visualizations(news_df):
 
     common_words = get_top_n_trigram(all_unprocessed_articles, 20)
 
-    df5 = pd.DataFrame(common_words, columns = ['Review Text' , 'count'])
-    top20trigrams = df5.groupby('Review Text').sum()['count'].sort_values(ascending=False)
+    df5 = pd.DataFrame(common_words, columns = ['Article News Text' , 'count'])
+    top20trigrams = df5.groupby('Article News Text').sum()['count'].sort_values(ascending=False)
 
     fig = px.bar(top20trigrams, x=top20trigrams.index, y="count", title='Top 20 Trigram words in the News Articles before removing stop words')
     fig.update_traces(marker_color='burlywood', marker_line_color='rgb(8,48,107)',
@@ -145,8 +145,8 @@ def make_visualizations(news_df):
     # Top 20 Trigram words in the News Articles after removing stop words
     common_words = get_top_n_trigram(all_processed_articles, 20)
 
-    df5 = pd.DataFrame(common_words, columns = ['Review Text' , 'count'])
-    top20trigrams = df5.groupby('Review Text').sum()['count'].sort_values(ascending=False)
+    df5 = pd.DataFrame(common_words, columns = ['Article News Text' , 'count'])
+    top20trigrams = df5.groupby('Article News Text').sum()['count'].sort_values(ascending=False)
 
 
     fig = px.bar(top20trigrams, x=top20trigrams.index, y="count", title='Top 20 Trigram words in the News Articles after removing stop words')

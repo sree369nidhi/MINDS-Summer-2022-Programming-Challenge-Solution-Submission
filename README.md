@@ -7,9 +7,24 @@ The specific task will be to create a pipeline that collects and analyzes news a
 Given a short list of curated websites, your script should be able to collect the latest news articles
 (via web scraping) and run them through some basic sentiment analysis.
 
-## Installation - Creating and Using Virtual Environment
+## Installing Anaconda
 
 If anaconda is not installed [Download link](https://www.anaconda.com/products/distribution), from this link follow the [Instructions to install anaconda](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/).
+
+## Install Environment through .yml file (one line installation.)
+
+Clone the repository to your local disk, In the repository there is a file named **minds_challenge_environment.yml**, to install all the dependencies in a single line, open **cmd** and enter the following command. 
+
+```cmd
+conda env create -f minds_challenge_environment.yml
+```
+
+## Note
+**Important:** Sometimes in **cmd** it might say **'conda' is not recognized as internal or external command**, then follow this [link](https://www.google.com/search?q=conda+is+not+recognised+i+winodws&rlz=1C1FKPE_enIN986IN988&oq=conda+is+not+recognised+i+winodws&aqs=chrome..69i57.7799j0j1&sourceid=chrome&ie=UTF-8) to resolve this error. 
+
+**Important:** If installation of environment doesn't work with .yml file, create an virtual environment and install all dependencies manually following the below commands. If installed successfully can skip the below manual environment creation and dependencies installation part.
+
+## Manual - Creating and Using Virtual Environment
 
 First step is to create anaconda virtual environment with python 3.9. 
 

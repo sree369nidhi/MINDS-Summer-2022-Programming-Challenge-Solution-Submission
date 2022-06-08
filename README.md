@@ -9,9 +9,9 @@ Given a short list of curated websites, your script should be able to collect th
 
 ## Installing Anaconda
 
-If anaconda is not installed [Download link](https://www.anaconda.com/products/distribution), from this link follow the [Instructions to install anaconda](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/).
+If anaconda is not installed [Download](https://www.anaconda.com/products/distribution), from this link follow the [Instructions to install anaconda](https://problemsolvingwithpython.com/01-Orientation/01.03-Installing-Anaconda-on-Windows/).
 
-## Install Environment through .yml file (one line installation.)
+## Install Virtual Environment through .yml file (one line installation.)
 
 Clone the repository to your local disk, In the repository there is a file named **minds_challenge_environment.yml**, to install all the dependencies in a single line, open **cmd** and enter the following command. 
 
